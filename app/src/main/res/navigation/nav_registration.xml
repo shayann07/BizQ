@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_registration"
+    app:startDestination="@id/registerFragment">
+
+    <!-- Step 1: Registration -->
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.finalproject.ui.register.RegisterFragment"
+        android:label="register_title"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_register_to_businessAbout"
+            app:destination="@id/businessAboutFragment" />
+    </fragment>
+
+    <!-- Step 2: Business Details -->
+    <fragment
+        android:id="@+id/businessAboutFragment"
+        android:name="com.example.finalproject.ui.register.BusinessAboutFragment"
+        android:label="business_about_title"
+        tools:layout="@layout/business_about_fragment">
+        <action
+            android:id="@+id/action_businessAbout_to_businessType"
+            app:destination="@id/businessTypeFragment" />
+        <action
+            android:id="@+id/action_businessAboutFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <!-- Step 3: Business Type -->
+    <fragment
+        android:id="@+id/businessTypeFragment"
+        android:name="com.example.finalproject.ui.register.BusinessTypeFragment"
+        android:label="business_type_title"
+        tools:layout="@layout/business_type_fragment">
+        <action
+            android:id="@+id/action_businessType_to_allServices"
+            app:destination="@id/allServicesFragment" />
+        <action
+            android:id="@+id/action_businessTypeFragment_to_businessAboutFragment"
+            app:destination="@id/businessAboutFragment" />
+    </fragment>
+
+    <!-- Step 4: Services -->
+    <fragment
+        android:id="@+id/allServicesFragment"
+        android:name="com.example.finalproject.ui.all_services.AllServicesFragment"
+        android:label="services_title"
+        tools:layout="@layout/fragment_all_services">
+        <action
+            android:id="@+id/action_allServices_to_availability"
+            app:destination="@id/availabilityFragment" />
+        <action
+            android:id="@+id/action_allServicesFragment_to_businessTypeFragment"
+            app:destination="@id/businessTypeFragment" />
+    </fragment>
+
+    <!-- Step 5: Availability -->
+    <fragment
+        android:id="@+id/availabilityFragment"
+        android:name="com.example.finalproject.ui.availability.AvailabilityFragment"
+        android:label="availability_title"
+        tools:layout="@layout/fragment_availability">
+        <action
+            android:id="@+id/action_availability_to_branding"
+            app:destination="@id/brandingFragment" />
+        <action
+            android:id="@+id/action_availabilityFragment_to_allServicesFragment"
+            app:destination="@id/allServicesFragment" />
+    </fragment>
+
+    <!-- Step 6: Branding -->
+    <fragment
+        android:id="@+id/brandingFragment"
+        android:name="com.example.finalproject.ui.register.BrandingFragment"
+        android:label="branding_title"
+        tools:layout="@layout/branding_fragment">
+        <action
+            android:id="@+id/action_branding_to_setupCompleteFragment"
+            app:destination="@id/setupCompleteFragment" />
+        <action
+            android:id="@+id/action_brandingFragment_to_availabilityFragment"
+            app:destination="@id/availabilityFragment" />
+    </fragment>
+
+    <!-- Step 7: Setup Complete -->
+    <fragment
+        android:id="@+id/setupCompleteFragment"
+        android:name="com.example.finalproject.ui.register.SetupCompleteFragment"
+        android:label="@string/business_setup_title"
+        tools:layout="@layout/fragment_setup_complete">
+
+        <!-- מעבר לפרופיל העסק המוגמר -->
+        <action
+            android:id="@+id/action_setupComplete_to_businessProfile"
+            app:destination="@id/businessProfileFragment"
+            app:popUpTo="@navigation/nav_registration"
+            app:popUpToInclusive="true" />
+
+        <!-- התחלה מחדש -->
+        <action
+            android:id="@+id/action_setupCompleteFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- עמוד פרופיל העסק (יעד למעבר מהרישום) -->
+    <fragment
+        android:id="@+id/businessProfileFragment"
+        android:name="com.example.finalproject.ui.business_profile.BusinessProfileFragment"
+        android:label="Business Profile"
+        tools:layout="@layout/fragment_business_profile" />
+
+
+</navigation>

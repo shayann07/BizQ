@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <action
+        android:id="@+id/action_global_homeFragment"
+        app:destination="@id/homeFragment"
+        app:popUpTo="@id/my_nav"
+        app:popUpToInclusive="false"/>
+
+    <!-- עמוד הבית הקיים שלך -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.finalproject.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_to_login"
+            app:destination="@id/loginFragment" />
+
+        <action
+            android:id="@+id/action_home_to_register"
+            app:destination="@id/nav_registration" />
+        <action
+            android:id="@+id/action_homeFragment_to_businessProfileFragment"
+            app:destination="@id/businessProfileFragment" />
+    </fragment>
+
+    <!-- מסך הכניסה -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.finalproject.ui.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/nav_registration" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_businessProfileFragment"
+            app:destination="@id/businessProfileFragment" />
+    </fragment>
+
+    <!-- עמוד פרופיל העסק -->
+    <fragment
+        android:id="@+id/businessProfileFragment"
+        android:name="com.example.finalproject.ui.business_profile.BusinessProfileFragment"
+        android:label="Business Profile"
+        tools:layout="@layout/fragment_business_profile">
+
+        <!-- חזרה לבית -->
+
+        <!-- מעבר לעריכת שעות עבודה -->
+        <action
+            android:id="@+id/action_businessProfile_to_editHours"
+            app:destination="@id/availabilityFragment" />
+
+        <!-- מעבר להוספת שירות -->
+        <action
+            android:id="@+id/action_businessProfile_to_addService"
+            app:destination="@id/allServicesFragment" />
+        <action
+            android:id="@+id/action_businessProfileFragment_to_availabilityFragment"
+            app:destination="@id/availabilityFragment" />
+        <action
+            android:id="@+id/action_businessProfileFragment_to_allServicesFragment"
+            app:destination="@id/allServicesFragment" />
+        <action
+            android:id="@+id/action_businessProfileFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/businessProfileFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!-- תת-גרף הרישום -->
+    <include app:graph="@navigation/nav_registration" />
+
+    <!-- action גלובלי למעבר לפרופיל -->
+    <action
+        android:id="@+id/action_global_businessProfileFragment"
+        app:destination="@id/businessProfileFragment" />
+    <!--<navigation
+        android:id="@+id/nav_registration"
+        app:startDestination="@id/registerFragment">
+        <include app:graph="@navigation/nav_registration" />
+
+        &lt;!&ndash; action גלובלי למעבר לפרופיל &ndash;&gt;
+        <action
+            android:id="@+id/action_global_businessProfileFragment"
+            app:destination="@id/businessProfileFragment" />
+    </navigation>-->
+
+
+
+    <!-- In your nav graph where allServicesFragment is declared -->
+    <fragment
+        android:id="@+id/allServicesFragment"
+        android:name="com.example.finalproject.ui.all_services.AllServicesFragment"
+        android:label="Manage Services"
+        tools:layout="@layout/fragment_all_services">
+
+        <argument
+            android:name="cameFromProfile"
+            app:argType="boolean"
+            android:defaultValue="false" />
+
+        <action
+            android:id="@+id/action_allServicesFragment_to_businessProfileFragment"
+            app:destination="@id/businessProfileFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/availabilityFragment"
+        android:name="com.example.finalproject.ui.availability.AvailabilityFragment"
+        android:label="Edit Hours"
+        tools:layout="@layout/fragment_availability">
+
+        <argument
+            android:name="cameFromProfile"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+
+
+</navigation>

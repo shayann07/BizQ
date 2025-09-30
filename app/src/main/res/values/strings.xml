@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BizQ</string>
+    <string name="need">at least one service is required</string>
+    <string name="language_switch">Switch Language</string>
+    <string name="app_logo_description">BizQ Application Logo</string>
+
+    <string name="welcome_to_bizq">Welcome to BizQ!</string>
+    <string name="manage_your_appointments_easily">Manage your appointments easily and efficiently.</string>
+    <string name="i_am_business_owner">I am a Business Owner</string>
+    <string name="i_am_customer">I am a Customer</string>
+    <string name="login_button">Login</string>
+    <string name="existing_account">Already have an account?</string>
+
+    <string name="business_setup_title">Business Setup</string>
+    <string name="business_setup_subtitle">Please fill in your business details to get started.</string>
+    <string name="business_name_hint">Business Name</string>
+    <string name="address_hint">Address</string>
+    <string name="phone_number_hint">Phone Number</string>
+    <string name="email_hint">Email</string>
+    <string name="save_business_info">Save</string>
+
+    <string name="add_service_title">Add Service</string>
+    <string name="add_service_subtitle">Enter the details of the new service.</string>
+    <string name="service_name_hint">Service Name</string>
+    <string name="service_duration_hint">Service Duration (in minutes)</string>
+    <string name="service_price_hint">Service Price (in NIS)</string>
+    <string name="add_service_button">Add Service</string>
+
+    <string name="register_title">Welcome!</string>
+    <string name="register_subtitle">Let\'s start with your basic details</string>
+    <string name="hint_full_name">Full Name</string>
+    <string name="hint_phone">Phone Number</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="terms_and_conditions">I agree to the Terms of Service and Privacy Policy</string>
+    <string name="btn_continue">Continue</string>
+
+    <string name="content_desc_back">Back</string>
+    <string name="title_business_about">A little about your business</string>
+    <string name="subtitle_business_about">To help us create an amazing page for your business, we need a few details</string>
+    <string name="hint_business_name">Your business name</string>
+    <string name="hint_business_phone">Business phone number</string>
+    <string name="hint_business_address">Business address</string>
+    <string name="question_calendar">Which calendar did you use until now?</string>
+    <string name="question_source">How did you hear about us?</string>
+    <string name="dropdown_placeholder">Select an answer</string>
+
+    <string name="title_business_type">What is your business type?</string>
+    <string name="subtitle_business_type">Select your business type.</string>
+
+    <string name="title_add_services">Let’s start adding services</string>
+    <string name="subtitle_add_services">Define at least one service now. You can add more services later.</string>
+    <string name="add_service">+ Add service</string>
+
+    <string name="title_working_hours">Working hours?</string>
+    <string name="subtitle_working_hours">You can change the working hours later as well.</string>
+
+    <string name="title_branding">Now let’s design your page!</string>
+    <string name="content_desc_upload_logo">Upload logo</string>
+    <string name="content_desc_camera_icon">Camera icon</string>
+    <string name="upload_logo_text">Tap to upload a logo</string>
+    <string name="content_desc_instagram">Instagram</string>
+    <string name="instagram_link">Instagram link</string>
+    <string name="instagram_hint">Username or full link</string>
+    <string name="about_section_title">About the business</string>
+    <string name="about_hint">A few words about your services, uniqueness, etc.</string>
+    <string name="gallery_title">Choose a background image for your page:</string>
+
+    <string name="setup_complete_emoji">🎉</string>
+    <string name="setup_complete_title">Your business page is ready!</string>
+    <string name="setup_complete_subtitle">All details have been saved successfully</string>
+    <string name="btn_view_page">View your business page</string>
+    <string name="btn_start_over">Start over</string>
+
+    <string name="edit_logo">Edit logo</string>
+    <string name="business_name">Quiet Café</string>
+    <string name="business_address">10 Herzl St, Tel Aviv</string>
+    <string name="status_open_now">Open now</string>
+    <string name="action_navigate">Navigate</string>
+    <string name="action_call">Call</string>
+    <string name="action_instagram">Instagram</string>
+    <string name="working_hours_title">Working hours</string>
+    <string name="working_hours_edit">Edit hours</string>
+    <string name="day_sunday">Sunday</string>
+    <string name="day_monday">Monday</string>
+    <string name="day_tuesday">Tuesday</string>
+    <string name="day_wednesday">Wednesday</string>
+    <string name="day_thursday">Thursday</string>
+    <string name="day_friday">Friday</string>
+    <string name="day_saturday">Saturday</string>
+    <string name="closed">Closed</string>
+    <string name="hours_sunday">08:00 - 22:00</string>
+    <string name="hours_monday">07:00 - 23:00</string>
+    <string name="hours_tuesday">07:00 - 23:00</string>
+    <string name="hours_wednesday">07:00 - 23:00</string>
+    <string name="hours_thursday">07:00 - 00:00</string>
+    <string name="hours_friday">08:00 - 15:00</string>
+    <string name="about_title">About the business</string>
+    <string name="edit_description">Edit description</string>
+    <string name="business_description">
+        Welcome to the coziest café in town! We serve quality coffee and fresh homemade cakes daily.
+    </string>
+    <string name="my_services">My services</string>
+    <string name="logout">Log out</string>
+
+    <string name="login_title">Sign In</string>
+    <string name="btn_login">Login</string>
+    <string name="no_account_text">Don\'t have an account yet? Click to register</string>
+
+    <string-array name="calendar_options">
+        <item>Google Calendar</item>
+        <item>Outlook Calendar</item>
+        <item>Apple Calendar</item>
+        <item>Manual Calendar</item>
+        <item>I don\'t have a calendar yet</item>
+    </string-array>
+    <string-array name="source_options">
+        <item>Friend or Colleague</item>
+        <item>Facebook</item>
+        <item>Instagram</item>
+        <item>Google / Internet Search</item>
+        <item>Advertisement / Flyer</item>
+        <item>Through an Institution / Organization</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="dialog_edit_description_title">Edit business description</string>
+    <string name="dialog_save">Save</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_logout_title">Logout</string>
+    <string name="dialog_logout_message">Are you sure you want to logout?</string>
+    <string name="dialog_logout_confirm">Logout</string>
+
+    <string name="add_first_service">+ Add first service</string>
+    <string name="add_another_service">+ Add another service</string>
+    <string name="dialog_add_service_title">Add New Service</string>
+    <string name="dialog_add_service_positive">Add</string>
+    <string name="dialog_add_service_negative">Cancel</string>
+    <string name="dialog_edit_service_title">Edit Service</string>
+    <string name="dialog_edit_service_positive">Save</string>
+    <string name="dialog_edit_service_negative">Cancel</string>
+    <string name="dialog_delete_service_title">Delete Service</string>
+    <string name="dialog_delete_service_message">Are you sure you want to delete the service "%1$s"?</string>
+    <string name="dialog_delete_service_positive">Delete</string>
+    <string name="dialog_delete_service_negative">Cancel</string>
+    <string name="nails">Nails</string>
+    <string name="beauty_saloon">Beauty Saloon</string>
+    <string name="fitness_trainer">Fitness Trainer</string>
+    <string name="others">Others</string>
+    <string name="add_at_least_one_service">Add at least 1 service</string>
+
+    <!-- res/values/strings.xml -->
+    <string name="done">Done</string>
+    <string name="continue_label">Continue</string>
+    <string name="wait_label">Wait…</string>
+    <string name="save_failed">Failed to save</string>
+    <string name="error_missing_business">Error: missing business</string>
+    <string name="edit">Edit</string>
+    <string name="view_business_page">View Business Page</string>
+    <string name="error_generic">Error Generic</string>
+    <string name="open_now_fmt">open now</string>
+    <string name="closed_now_fmt">Closed Now</string>
+    <string name="closed_today">Closed today</string>
+    <string name="nothing_to_share">Nothing to share</string>
+    <string name="share_via">Share Via</string>
+    <string name="hours_not_set">Hourse Not set</string>
+    <string name="invalid_hours">Invalid hours</string>
+    <string name="navigation_unavailable">Navigation unavailable</string>
+    <string name="invalid_time_range">Invalid time range</string>
+    <string name="couldnt_open_screen">Couldn\'t open screen</string>
+
+
+</resources>

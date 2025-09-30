@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md_theme_primary">#6750A4</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#EADDFF</color>
+    <color name="md_theme_onPrimaryContainer">#21005D</color>
+    <color name="md_theme_secondary">#625B71</color>
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+    <color name="md_theme_secondaryContainer">#E8DEF8</color>
+    <color name="md_theme_onSecondaryContainer">#1D192B</color>
+    <color name="md_theme_tertiary">#7D5260</color>
+    <color name="md_theme_onTertiary">#FFFFFF</color>
+    <color name="md_theme_tertiaryContainer">#FFD8E4</color>
+    <color name="md_theme_onTertiaryContainer">#31111D</color>
+    <color name="md_theme_error">#BA1A1A</color>
+    <color name="md_theme_onError">#FFFFFF</color>
+    <color name="md_theme_errorContainer">#FFDAD6</color>
+    <color name="md_theme_onErrorContainer">#410002</color>
+    <color name="md_theme_background">#FFFBFE</color>
+    <color name="md_theme_onBackground">#1C1B1F</color>
+    <color name="md_theme_surface">#FFFBFE</color>
+    <color name="md_theme_onSurface">#1C1B1F</color>
+    <color name="md_theme_surfaceVariant">#E7E0EC</color>
+    <color name="md_theme_onSurfaceVariant">#49454F</color>
+    <color name="md_theme_outline">#7A757F</color>
+    <color name="md_theme_inverseOnSurface">#F4EFF4</color>
+    <color name="md_theme_inverseSurface">#313033</color>
+    <color name="md_theme_inversePrimary">#D0BCFF</color>
+    <color name="green">#10D510</color>
+    <color name="md_theme_surfaceTint">#6750A4</color>
+    <color name="md_theme_outlineVariant">#CAC4D0</color>
+    <color name="black">#000000</color>
+    <color name="primary">#4CAF50</color>
+    <color name="primary_dark">#388E3C</color>
+    <color name="primary_light">#C8E6C9</color>
+
+    <!-- Green Shades -->
+    <color name="green_primary">#4CAF50</color>
+    <color name="strong_green">#2E7D32</color>
+    <color name="light_green">#81C784</color>
+
+    <!-- Neutral Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="dark_gray">#424242</color>
+    <color name="gray_text">#757575</color>
+    <color name="gray_border">#E0E0E0</color>
+    <color name="light_gray_bg">#F5F5F5</color>
+
+    <!-- Accent Colors -->
+    <color name="red">#F44336</color>
+    <color name="blue">#2196F3</color>
+    <color name="orange">#FF9800</color>
+    <color name="purple">#9C27B0</color>
+
+    <!-- Background Colors -->
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#F8F8F8</color>
+    <color name="error">#B00020</color>
+
+
+    <color name="blue_light">#E3F2FD</color>
+    <color name="purple_light">#E1BEE7</color>
+
+    <color name="divider_color">#E0E0E0</color>
+    <color name="yellow">#FFC107</color>
+
+    <!-- Accent Colors -->
+    <color name="whatsapp_green">#25D366</color>
+
+
+
+    </resources>

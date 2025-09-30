@@ -1,0 +1,35 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp"
+    android:viewportWidth="960" android:viewportHeight="960"
+    android:tint="#000000">
+
+    <!-- מסגרת מרובעת עם פינות מעוגלות -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#000000"
+        android:strokeWidth="80"
+        android:pathData="M240,160 h480
+                          a80,80 0 0 1 80,80
+                          v480
+                          a80,80 0 0 1 -80,80
+                          h-480
+                          a80,80 0 0 1 -80,-80
+                          v-480
+                          a80,80 0 0 1 80,-80 z"/>
+
+    <!-- עדשה -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#000000"
+        android:strokeWidth="80"
+        android:pathData="M480,320
+                          a160,160 0 1,0 0,320
+                          a160,160 0 1,0 0,-320 z"/>
+
+    <!-- “פלאש” -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M700,260
+                          a30,30 0 1,0 0,60
+                          a30,30 0 1,0 0,-60 z"/>
+</vector>

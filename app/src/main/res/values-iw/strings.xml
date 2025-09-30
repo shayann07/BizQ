@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BizQ</string>
+
+    <string name="need">at least one service is required</string>
+    <string name="language_switch">Switch Language</string>
+    <string name="app_logo_description">BizQ Application Logo</string>
+
+    <string name="welcome_to_bizq">ברוכים הבאים ל-BizQ!</string>
+    <string name="manage_your_appointments_easily">נהל את התורים שלך בקלות וביעילות.</string>
+    <string name="i_am_business_owner">אני בעל עסק</string>
+    <string name="i_am_customer">אני לקוח</string>
+    <string name="login_button">התחבר</string>
+    <string name="existing_account">כבר יש לך חשבון?</string>
+
+    <string name="business_setup_title">הגדרת עסק</string>
+    <string name="business_setup_subtitle">אנא מלא את פרטי העסק שלך כדי להתחיל.</string>
+    <string name="business_name_hint">שם העסק</string>
+    <string name="address_hint">כתובת</string>
+    <string name="phone_number_hint">מספר טלפון</string>
+    <string name="email_hint">אימייל</string>
+    <string name="save_business_info">שמור</string>
+
+    <string name="add_service_title">הוספת שירות</string>
+    <string name="add_service_subtitle">מלא את הפרטים של השירות החדש.</string>
+    <string name="service_name_hint">שם השירות</string>
+    <string name="service_duration_hint">משך השירות (בדקות)</string>
+    <string name="service_price_hint">מחיר השירות (בש"ח)</string>
+    <string name="add_service_button">הוסף שירות</string>
+
+    <string name="register_title">ברוך הבא!</string>
+    <string name="register_subtitle">בואו נתחיל בפרטים הבסיסיים שלך</string>
+    <string name="hint_full_name">שם מלא</string>
+    <string name="hint_phone">מספר טלפון</string>
+    <string name="hint_email">כתובת אימייל</string>
+    <string name="hint_password">סיסמה</string>
+    <string name="terms_and_conditions">אני מסכים לתנאי השירות ולמדיניות הפרטיות</string>
+    <string name="btn_continue">המשך</string>
+
+    <!-- Common -->
+    <string name="content_desc_back">חזרה</string>
+
+    <!-- Business About -->
+    <string name="title_business_about">קצת על העסק שלך</string>
+    <string name="subtitle_business_about">כדי שנוכל ליצור עמוד מדהים לעסק שלך, נצטרך כמה פרטים</string>
+    <string name="hint_business_name">שם העסק שלך</string>
+    <string name="hint_business_phone">מספר טלפון של העסק</string>
+    <string name="hint_business_address">כתובת העסק</string>
+    <string name="question_calendar">איזה יומן השתמשת עד עכשיו?</string>
+    <string name="question_source">איך שמעת עלינו?</string>
+    <string name="dropdown_placeholder">בחר תשובה</string>
+
+    <!-- Business Type -->
+    <string name="title_business_type">מה סוג העסק שלך?</string>
+    <string name="subtitle_business_type">בחר את סוג העסק שלך. ניתן לבחור עד 3 סוגי עסקים</string>
+
+    <!-- Add Services -->
+    <string name="title_add_services">בואו נתחיל להוסיף שירותים</string>
+    <string name="subtitle_add_services">הגדר לפחות שירות אחד עכשיו. ניתן יהיה להוסיף שירותים נוספים בהמשך.</string>
+    <string name="add_service">+ הוספת שירות</string>
+
+    <!-- Working Hours -->
+    <string name="title_working_hours">שעות עבודה?</string>
+    <string name="subtitle_working_hours">ניתן לשנות את שעות העבודה גם בהמשך.</string>
+
+    <!-- Branding -->
+    <string name="title_branding">עכשיו נעצב את העמוד שלך!</string>
+    <string name="content_desc_upload_logo">העלאת לוגו</string>
+    <string name="content_desc_camera_icon">אייקון מצלמה</string>
+    <string name="upload_logo_text">לחץ/י להעלאת לוגו</string>
+    <string name="content_desc_instagram">אינסטגרם</string>
+    <string name="instagram_link">קישור לאינסטגרם</string>
+    <string name="instagram_hint">שם משתמש או קישור מלא</string>
+    <string name="about_section_title">אודות העסק</string>
+    <string name="about_hint">כמה מילים על השירותים שלך, ייחודיות ועוד.</string>
+    <string name="gallery_title">בחר/י תמונת רקע לעמוד שלך:</string>
+
+    <string name="setup_complete_emoji">🎉</string>
+    <string name="setup_complete_title">עמוד העסק שלך מוכן!</string>
+    <string name="setup_complete_subtitle">כל הפרטים נשמרו בהצלחה</string>
+    <string name="btn_view_page">ראה את עמוד העסק שלך</string>
+    <string name="btn_start_over">התחל מחדש</string>
+
+    <string name="edit_logo">ערוך לוגו</string>
+    <string name="business_name">קפה שקט</string>
+    <string name="business_address">הרצל 10, תל אביב</string>
+    <string name="status_open_now">פתוח עכשיו</string>
+    <string name="action_navigate">ניווט</string>
+    <string name="action_call">התקשר</string>
+    <string name="action_instagram">אינסטגרם</string>
+    <string name="working_hours_title">שעות עבודה</string>
+    <string name="working_hours_edit">ערוך שעות</string>
+
+    <string name="day_sunday">יום ראשון</string>
+    <string name="day_monday">יום שני</string>
+    <string name="day_tuesday">יום שלישי</string>
+    <string name="day_wednesday">יום רביעי</string>
+    <string name="day_thursday">יום חמישי</string>
+    <string name="day_friday">יום שישי</string>
+    <string name="day_saturday">שבת</string>
+
+    <string name="closed">סגור</string>
+
+    <string name="hours_sunday">08:00 - 22:00</string>
+    <string name="hours_monday">07:00 - 23:00</string>
+    <string name="hours_tuesday">07:00 - 23:00</string>
+    <string name="hours_wednesday">07:00 - 23:00</string>
+    <string name="hours_thursday">07:00 - 00:00</string>
+    <string name="hours_friday">08:00 - 15:00</string>
+
+    <string name="about_title">אודות העסק</string>
+    <string name="edit_description">ערוך תיאור</string>
+    <string name="business_description">
+        ברוכים הבאים לבית הקפה הכי נעים בעיר! אנחנו מגישים קפה איכותי ועוגות ביתיות טריות מדי יום.
+    </string>
+
+    <string name="my_services">השירותים שלי</string>
+    <string name="logout">התנתק</string>
+
+    <string name="login_title">התחברות</string>
+    <string name="btn_login">כניסה</string>
+    <string name="no_account_text">אין לך חשבון עדיין? לחץ להירשם</string>
+
+    <string-array name="calendar_options">
+        <item>יומן Google</item>
+        <item>יומן Outlook</item>
+        <item>יומן Apple</item>
+        <item>יומן ידני</item>
+        <item>אין לי יומן קודם</item>
+    </string-array>
+
+    <string-array name="source_options">
+        <item>חבר או קולגה</item>
+        <item>פייסבוק</item>
+        <item>אינסטגרם</item>
+        <item>חיפוש בגוגל / אינטרנט</item>
+        <item>פרסומת / פלייר</item>
+        <item>דרך מוסד / ארגון</item>
+        <item>אחר</item>
+    </string-array>
+
+    <string name="dialog_edit_description_title">עריכת תיאור העסק</string>
+    <string name="dialog_save">שמור</string>
+    <string name="dialog_cancel">ביטול</string>
+    <string name="dialog_logout_title">התנתקות</string>
+    <string name="dialog_logout_message">האם אתה בטוח שברצונך להתנתק?</string>
+    <string name="dialog_logout_confirm">התנתק</string>
+
+    <string name="add_first_service">+ הוספת שירות ראשון</string>
+    <string name="add_another_service">+ הוספת שירות נוסף</string>
+    <string name="dialog_add_service_title">הוספת שירות חדש</string>
+    <string name="dialog_add_service_positive">הוסף</string>
+    <string name="dialog_add_service_negative">ביטול</string>
+    <string name="dialog_edit_service_title">עריכת שירות</string>
+    <string name="dialog_edit_service_positive">שמור</string>
+    <string name="dialog_edit_service_negative">ביטול</string>
+    <string name="dialog_delete_service_title">מחיקת שירות</string>
+    <string name="dialog_delete_service_message">האם אתה בטוח שברצונך למחוק את השירות "%1$s"?</string>
+    <string name="dialog_delete_service_positive">מחק</string>
+    <string name="dialog_delete_service_negative">ביטול</string>
+    <string name="nails">ציפורניים</string>
+    <string name="beauty_saloon">מכון יופי</string>
+    <string name="fitness_trainer">מאמן כושר</string>
+    <string name="others">אחר</string>
+
+
+    <string name="add_at_least_one_service">Add at least 1 service</string>
+
+    <!-- res/values/strings.xml -->
+    <string name="done">Done</string>
+    <string name="continue_label">Continue</string>
+    <string name="wait_label">Wait…</string>
+    <string name="save_failed">Failed to save</string>
+    <string name="error_missing_business">Error: missing business</string>
+    <string name="edit">Edit</string>
+
+    <string name="view_business_page">View Business Page</string>
+
+    <string name="error_generic">Error Generic</string>
+    <string name="closed_now_fmt">Closed Now</string>
+    <string name="closed_today">Closed today</string>
+
+    <string name="open_now_fmt">open now</string>
+    <string name="nothing_to_share">Nothing to share</string>
+    <string name="share_via">Share Via</string>
+    <string name="hours_not_set">Hourse Not set</string>
+    <string name="invalid_hours">Invalid hours</string>
+    <string name="navigation_unavailable">Navigation unavailable</string>
+    <string name="couldnt_open_screen">Couldn\'t open screen</string>
+
+</resources>

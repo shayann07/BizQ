@@ -1,0 +1,725 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ui.business_profile.BusinessProfileFragment"
+    android:layoutDirection="rtl"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/btnLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="120dp"
+                    android:layout_marginTop="30dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/language_switch"
+                    android:src="@drawable/outline_language_24"
+                    app:tint="@color/md_theme_onBackground" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="32dp">
+
+
+
+                    <!-- Logo -->
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="16dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivBusinessLogo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="24dp"
+                            android:scaleType="centerInside"
+                            app:shapeAppearanceOverlay="@style/CircularImageStyle"
+                            app:srcCompat="@drawable/outline_add_a_photo_24"
+                            tools:src="@tools:sample/avatars" />
+
+                        <!-- Edit Logo Button -->
+                        <ImageView
+                            android:id="@+id/btnEditLogo"
+                            android:layout_width="28dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="bottom|end"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:contentDescription="@string/edit_logo"
+                            android:focusable="true"
+                            android:padding="6dp"
+                            app:srcCompat="@drawable/outline_add_a_photo_24" />
+                    </FrameLayout>
+
+                    <!-- Business Name -->
+                    <TextView
+                        android:id="@+id/tvBusinessName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/business_name"
+                        android:textColor="#333"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp"
+                        tools:text="@string/business_name" />
+
+                    <!-- Address -->
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/business_address"
+                        android:textColor="#666"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="12dp"
+                        tools:text="@string/business_address" />
+
+                    <!-- Status (Open/Closed Now) -->
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:text="@string/status_open_now"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#4CAF50" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Actions Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="16dp">
+
+                <!-- Navigate -->
+                <LinearLayout
+                    android:id="@+id/btnNavigate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="#E3F2FD"
+                        android:padding="8dp"
+                        app:srcCompat="@drawable/baseline_location_on_24"
+                        app:tint="#1976D2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/action_navigate"
+                        android:textSize="12sp"
+                        android:textColor="#666"
+                        android:layout_marginTop="6dp" />
+                </LinearLayout>
+
+                <!-- Call -->
+                <LinearLayout
+                    android:id="@+id/btnCall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="#E8F5E8"
+                        android:padding="8dp"
+                        app:srcCompat="@drawable/baseline_phone_24"
+                        app:tint="#4CAF50" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/action_call"
+                        android:textSize="12sp"
+                        android:textColor="#666"
+                        android:layout_marginTop="6dp" />
+                </LinearLayout>
+
+                <!-- Instagram -->
+                <LinearLayout
+                    android:id="@+id/btnShare"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="#FFF3E0"
+                        android:padding="8dp"
+                        app:srcCompat="@drawable/outline_instagram_24"
+                        app:tint="#FF9800" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/action_instagram"
+                        android:textSize="12sp"
+                        android:textColor="#666"
+                        android:layout_marginTop="6dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Working Hours Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layoutDirection="locale"
+                android:textDirection="locale">
+
+                <!-- Header: icon at start, title centered in between, button at end (mirrors automatically) -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:id="@+id/ivHours"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/working_hours_title"
+                        app:tint="#666"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/working_hours_title"
+                        android:textColor="#333"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:textDirection="firstStrong"
+                        app:layout_constraintStart_toEndOf="@id/ivHours"
+                        app:layout_constraintEnd_toStartOf="@id/btnEditHours"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/btnEditHours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#E3F2FD"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:text="@string/working_hours_edit"
+                        android:textColor="#1976D2"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Reusable row: Day (start) | Hours (end) -->
+                <!-- Sunday -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="4dp"
+                    android:baselineAligned="false"
+                    android:layoutDirection="locale">
+
+                    <!-- Day: start-aligned inside left/right half (mirrors with locale) -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/day_sunday"
+                        android:textColor="#666"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:textDirection="firstStrong" />
+
+                    <!-- Hours: end-aligned inside opposite half (mirrors with locale) -->
+                    <TextView
+                        android:id="@+id/tvHoursSunday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/hours_sunday"
+                        android:textColor="#333"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="end"
+                        android:textDirection="firstStrong" />
+                </LinearLayout>
+
+                <!-- Monday -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="4dp"
+                    android:baselineAligned="false"
+                    android:layoutDirection="locale">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/day_monday"
+                        android:textColor="#666"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:textDirection="firstStrong" />
+
+                    <TextView
+                        android:id="@+id/tvHoursMonday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/hours_monday"
+                        android:textColor="#333"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="end"
+                        android:textDirection="firstStrong" />
+                </LinearLayout>
+
+                <!-- Tuesday -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="4dp"
+                    android:baselineAligned="false"
+                    android:layoutDirection="locale">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/day_tuesday"
+                        android:textColor="#666"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:textDirection="firstStrong" />
+
+                    <TextView
+                        android:id="@+id/tvHoursTuesday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/hours_tuesday"
+                        android:textColor="#333"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="end"
+                        android:textDirection="firstStrong" />
+                </LinearLayout>
+
+                <!-- Wednesday -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="4dp"
+                    android:baselineAligned="false"
+                    android:layoutDirection="locale">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/day_wednesday"
+                        android:textColor="#666"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:textDirection="firstStrong" />
+
+                    <TextView
+                        android:id="@+id/tvHoursWednesday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/hours_wednesday"
+                        android:textColor="#333"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="end"
+                        android:textDirection="firstStrong" />
+                </LinearLayout>
+
+                <!-- Thursday -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="4dp"
+                    android:baselineAligned="false"
+                    android:layoutDirection="locale">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/day_thursday"
+                        android:textColor="#666"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:textDirection="firstStrong" />
+
+                    <TextView
+                        android:id="@+id/tvHoursThursday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/hours_thursday"
+                        android:textColor="#333"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="end"
+                        android:textDirection="firstStrong" />
+                </LinearLayout>
+
+                <!-- Friday -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="4dp"
+                    android:baselineAligned="false"
+                    android:layoutDirection="locale">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/day_friday"
+                        android:textColor="#666"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:textDirection="firstStrong" />
+
+                    <TextView
+                        android:id="@+id/tvHoursFriday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/hours_friday"
+                        android:textColor="#333"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="end"
+                        android:textDirection="firstStrong" />
+                </LinearLayout>
+
+                <!-- Saturday -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="4dp"
+                    android:baselineAligned="false"
+                    android:layoutDirection="locale">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/day_saturday"
+                        android:textColor="#666"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:textDirection="firstStrong" />
+
+                    <TextView
+                        android:id="@+id/tvHoursSaturday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/closed"
+                        android:textColor="#333"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="end"
+                        android:textDirection="firstStrong" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <!-- About Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layoutDirection="locale"
+                android:textDirection="locale">
+
+                <!-- Header: Title (start) | Edit (end); mirrors with locale -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tvAboutTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_title"
+                        android:textColor="#333"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:textDirection="firstStrong"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btnEditDescription"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/btnEditDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#E3F2FD"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:text="@string/edit"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp"
+                        android:textColor="#1976D2"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Body: start-aligned, flows correctly for Urdu/English -->
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/business_description"
+                    android:textColor="#666"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="2dp"
+                    android:gravity="start"
+                    android:textDirection="firstStrong"
+                    android:breakStrategy="balanced"
+                    android:hyphenationFrequency="normal"
+                    tools:text="@string/business_description" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Services Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="32dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layoutDirection="locale"
+                android:textDirection="locale">
+
+                <!-- Header: Title (start) | Add (end); mirrors with locale -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/tvServicesTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_services"
+                        android:textColor="#333"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:textDirection="firstStrong"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btnAddService"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/btnAddService"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#E3F2FD"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:text="@string/add_service"
+                        android:textColor="#1976D2"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Services list -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvServices"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    tools:itemCount="3" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Logout -->
+        <LinearLayout
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/logout"
+                android:textColor="#E53935"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

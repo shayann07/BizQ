@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layoutDirection="rtl">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvServiceName"
+            style="@style/TextAppearance.Material3.TitleMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/md_theme_onSurface"
+            app:layout_constraintEnd_toStartOf="@id/tvServicePrice"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="service" />
+
+        <TextView
+            android:id="@+id/tvServicePrice"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/md_theme_onSurfaceVariant"
+            app:layout_constraintEnd_toStartOf="@id/tvServiceDuration"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="price" />
+
+        <TextView
+            android:id="@+id/tvServiceDuration"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/md_theme_onSurfaceVariant"
+            app:layout_constraintEnd_toStartOf="@id/ivEditService"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textStyle="bold"
+            tools:text="time" />
+
+        <ImageView
+            android:id="@+id/ivEditService"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/baseline_edit_24"
+            app:tint="@color/md_theme_primary"
+            app:layout_constraintEnd_toStartOf="@id/ivDeleteService"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivDeleteService"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_delete_outline_24"
+            app:tint="@color/md_theme_error"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
