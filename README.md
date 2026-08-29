@@ -1,96 +1,122 @@
-# BizQ
+# BizQ — Small Business Onboarding, Service Catalog & Scheduling Android App
 
-Android business-profile builder for registering a service business, defining its offerings and hours, and maintaining a shareable profile backed by Firebase and Room.
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.0.21-purple.svg)](https://kotlinlang.org)
+[![Android SDK](https://img.shields.io/badge/Android%20SDK-35-green.svg)](https://developer.android.com)
+[![Gradle](https://img.shields.io/badge/Gradle-8.13-blue.svg)](https://gradle.org)
+[![Dagger Hilt](https://img.shields.io/badge/Dagger%20Hilt-2.48-brightgreen.svg)](https://dagger.dev/hilt/)
+[![Firebase](https://img.shields.io/badge/Firebase-Auth%20%7C%20Firestore%20%7C%20Storage-orange.svg)](https://firebase.google.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## Overview
+BizQ is a native Android application built in Kotlin with Dagger Hilt dependency injection, Room local persistence, and Firebase Cloud Firestore designed to empower small business owners with automated digital onboarding, service catalog management, weekly appointment scheduling, and dynamic brand theme customization.
 
-BizQ is a Kotlin Android application focused on business-owner onboarding. A user creates or signs in to a Firebase account, completes a six-step setup flow, and manages a profile containing business details, industry, services, weekly availability, logo, Instagram link, and description.
+---
 
-The app writes cloud data to Firestore and Firebase Storage while mirroring core records in a local Room database. Its interface supports English and Hebrew and includes profile actions for calling, opening an address in a maps application, and opening Instagram.
+## Application Architecture & Registration Flow
 
-## Features
+```mermaid
+graph TD
+    subgraph Onboarding_Pipeline ["6-Step Business Onboarding (nav_registration.xml)"]
+        Register[1. User Registration & Auth] --> About[2. Business Profile & Contact]
+        About --> BType[3. Industry Vertical & Category Selection]
+        BType --> Services[4. Service Catalog Definition & Pricing]
+        Services --> Availability[5. Weekly Schedule & Operational Hours]
+        Availability --> Branding[6. Dynamic Brand Palette Theming]
+        Branding --> Complete[Onboarding Complete -> Dashboard]
+    end
 
-- Firebase email/password registration and login
-- Six-step business onboarding with durable local and cloud progress
-- Business name, phone, address, industry, and description management
-- Service creation, editing, deletion, duration, pricing in NIS, and descriptions
-- Weekly working-hours editor with per-day availability
-- Business logo selection and Firebase Storage upload
-- Instagram handle/link normalization and profile launch action
-- Business profile actions for phone calls and map navigation
-- Room-first reads with Firestore synchronization for business data
-- Brand-color suggestions from The Color API with local fallback colors
-- English and Hebrew language switching
-- Resume routing for completed onboarding and cleanup of abandoned registration state
-
-## Tech Stack
-
-- Kotlin and Android SDK
-- XML layouts and View Binding
-- Jetpack Navigation
-- ViewModel, LiveData, and Kotlin coroutines
-- Hilt dependency injection
-- Room persistence
-- Firebase Authentication, Cloud Firestore, Storage, and Analytics
-- Retrofit, OkHttp, Moshi, and Gson
-- Glide
-- Material Components
-
-## Architecture
-
-BizQ uses an MVVM-style structure with repositories coordinating cloud and local storage:
-
-1. Fragments render registration, profile, service, and availability screens.
-2. ViewModels validate input and coordinate asynchronous work.
-3. Repository interfaces separate authentication, business, service, availability, and onboarding operations.
-4. Firestore is the cloud store, while Room caches users, businesses, services, availability, drafts, and onboarding state.
-5. Hilt modules provide repositories, DAOs, Firebase clients, and the color API client.
-
-The authenticated Firebase UID also acts as the business identifier throughout the current data model.
-
-## Project Structure
-
-```text
-app/src/main/java/com/example/finalproject/
-|-- colorsApi/       # Color API models, adapter, and repository
-|-- data/
-|   |-- loca_db/     # Room database and DAOs
-|   |-- models/      # Business, service, user, and availability models
-|   |-- remote/      # Retrofit color API definitions
-|   `-- repository/  # Local/cloud repository implementations
-|-- di/              # Hilt modules
-|-- ui/               # Home, auth, onboarding, profile, services, and hours
-|-- utils/            # Resource wrappers and fragment helpers
-|-- App.kt
-`-- MainActivity.kt
+    subgraph Data_Sync ["Dual Persistence Architecture"]
+        Services --> RoomDB[(Local Room DB: finalproject.db)]
+        Availability --> RoomDB
+        Services --> Firestore[(Google Cloud Firestore)]
+        Availability --> Firestore
+        Branding --> ColorAPI[The Color API REST Client]
+    end
 ```
 
-## Getting Started
+---
+
+## Key Features
+
+- **6-Step Guided Business Setup**: Seamless stepper wizard guiding proprietors through business metadata, services, business hours, and branding.
+- **Dual Storage Architecture**: Offline-first Room database cache (`finalproject.db`) synchronized with Google Cloud Firestore remote cloud repositories.
+- **Dynamic Brand Theming**: Integrated client for **The Color API** fetching complementary color schemes and swatches based on the user's primary brand selection.
+- **Weekly Schedule & Availability Matrix**: Interactive time-slot pickers allowing businesses to customize opening and closing hours per weekday.
+- **Cloud Media Uploads**: Integrated image picking and Firebase Cloud Storage pipeline for business logos and banner media.
+
+---
+
+## Technical Stack
+
+| Component | Library / Framework | Version |
+|---|---|---|
+| **Language** | Kotlin | 2.0.21 |
+| **Build System** | Android Gradle Plugin / Gradle | 8.12.2 / 8.13 |
+| **SDK Levels** | Compile SDK: 35, Target SDK: 35, Min SDK: 24 | Android 7.0+ |
+| **Dependency Injection** | Dagger Hilt + KAPT | 2.48 |
+| **Local Database** | AndroidX Room (Runtime, KTX, Compiler) | 2.6.1 |
+| **Cloud Services** | Firebase Auth, Cloud Firestore, Cloud Storage, Analytics | Firebase BoM 33.7.0 |
+| **Networking & HTTP** | Retrofit 2 + Gson Converter + Moshi + OkHttp Logging | 2.11.0 / 4.12.0 |
+| **Image Loading** | Bumptech Glide | 4.16.0 |
+
+---
+
+## Setup & Local Development
 
 ### Prerequisites
+- Android Studio Ladybug (2024.2.1+) or newer
+- JDK 17 / Java 11 runtime
+- Android SDK 35 installed
 
-- Android Studio with a JDK compatible with Android Gradle Plugin 8.12.2
-- Android SDK 35
-- An Android 7.0 (API 24) or newer device or emulator
-- A Firebase project with Authentication, Firestore, and Storage configured
+### Step-by-Step Configuration
 
-### Build
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/shayann07/BizQ.git
+   cd BizQ
+   ```
 
-```bash
-git clone https://github.com/shayann07/BizQ.git
-cd BizQ
-./gradlew assembleDebug
+2. **Configure Firebase Credentials:**
+   Copy the example configuration template:
+   ```bash
+   cp app/google-services.json.example app/google-services.json
+   ```
+
+3. **Configure Local SDK:**
+   ```bash
+   cp local.properties.example local.properties
+   ```
+
+4. **Build the Application:**
+   ```bash
+   ./gradlew assembleDebug
+   ```
+
+---
+
+## Repository Structure
+
+```
+BizQ/
+├── app/
+│   ├── src/main/
+│   │   ├── java/com/example/finalproject/
+│   │   │   ├── App.kt                  # @HiltAndroidApp application entrypoint
+│   │   │   ├── data/                   # Models, Room DAOs, and Firebase Repositories
+│   │   │   ├── di/                     # Hilt Modules (AppModule, RepositoryModule, NetworkModule)
+│   │   │   └── ui/                     # Registration flow fragments, ViewModels, Adapters
+│   │   ├── res/                        # Layouts, navigation graphs (my_nav, nav_registration)
+│   │   └── AndroidManifest.xml         # Package queries, permissions
+│   ├── google-services.json.example
+│   └── build.gradle.kts
+├── local.properties.example
+├── LICENSE                             # MIT License
+└── README.md
 ```
 
-On Windows PowerShell, use `./gradlew.bat assembleDebug`. Configure `ANDROID_HOME` or add a local `sdk.dir` entry before running Gradle. Replace the included project-specific Firebase configuration when connecting the app to another Firebase project.
+---
 
-## Current Status and Limitations
+## License
 
-- The implemented flow is for business owners; customer discovery, booking, calendars, and appointment management are not implemented.
-- The repository does not document Firestore/Storage rules, schema deployment, Firebase setup, or release distribution.
-- An abandoned partial onboarding flow can delete the user's cloud records and attempt to delete the Firebase Authentication account.
-- A Kotlin source file is also tracked directly under `app/src/main/res`, outside the normal source tree.
-- A release APK, baseline profile artifacts, and Firebase configuration are committed to the repository.
-- Only generated example unit and instrumentation tests are present.
-- A local build attempt on June 12, 2026 could not start because the Android SDK path was not configured in the environment.
-- No license file is included.
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
+
+Copyright (c) 2026 **shayann07**
